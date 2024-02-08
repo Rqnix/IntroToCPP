@@ -16,6 +16,7 @@ void Circle::SetRadius(float f)
 	if (f < 0)
 	{
 		m_radius = 0.f;
+
 	}
 	else
 	{
