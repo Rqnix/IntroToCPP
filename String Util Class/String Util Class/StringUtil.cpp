@@ -1,5 +1,6 @@
 #include "StringUtil.h"
 #include <iostream>
+#include <ctype.h>
 
 StringUtil::StringUtil()
 {
@@ -61,18 +62,49 @@ bool StringUtil::EqualTo(const char* c) //Measures two strings, confirming if th
     return true; //If false is not run, and the loop finishes (when i = Length) then return true and end the function
 }
 
-void StringUtil::Append(const char* c)
+void StringUtil::Append(const char* c) 
 {
-    
+    char* app_str; 
+    app_str = new char[strlen(c) + Length() + 1];
+    strcpy_s(app_str, strlen(c) + Length() + 1, arrayInput);
+    strcat_s(app_str, strlen(c) + Length() + 1, c);
+    delete[] arrayInput;
+    arrayInput = app_str;
+    app_str = nullptr; 
 }
 
-//void StringUtil::Prepend(const char* c)
-//{
-//}
+void StringUtil::Prepend(const char* c)
+{
+    char* pre_str;
+    pre_str = new char[strlen(c) + Length() + 1];
+    strcpy_s(pre_str, strlen(c) + Length() + 1, c);
+    strcat_s(pre_str, strlen(c) + Length() + 1, arrayInput);
+    delete[] arrayInput;
+    arrayInput = pre_str;
+    pre_str = nullptr; 
+    
+}
 
 
 const char* StringUtil::CStr() const //Returns the string stored in arrayInput
 {
     return arrayInput;
+}
+
+void StringUtil::ToLower()
+{
+    //for (int i = 0; i <= Length(); i++)
+    int low_str = 0;
+    for (int i = 0; i < Length(); i++)
+    {
+        low_str = (tolower(arrayInput[i]));
+    }
+
+
+}
+
+void StringUtil::ToUpper()
+{
+
 }
 

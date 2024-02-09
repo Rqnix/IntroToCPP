@@ -23,5 +23,8 @@ public: //Constructor/Destructors
 	void Prepend(const char* c);
 
 	const char* CStr() const;
+
+	void ToLower();
+	void ToUpper();
 };
 
