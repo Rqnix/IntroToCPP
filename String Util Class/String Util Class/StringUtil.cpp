@@ -162,6 +162,11 @@ char* StringUtil::ReadFromConsole()
     return arrayInput;
 }
 
+void StringUtil::WriteToConsole()
+{
+    std::cout << arrayInput << std::endl;  
+}
+
 
 
 

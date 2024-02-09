@@ -32,5 +32,6 @@ public: //Constructor/Destructors
 	char Find(int startIndex, const char* arrayInput);
 
 	char* ReadFromConsole();
+	void WriteToConsole();
 };
 
