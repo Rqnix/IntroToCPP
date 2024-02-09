@@ -7,7 +7,7 @@ StringUtil::StringUtil()
     /*char array[4] = {'1', 'P', 'b', '\0'};
     arrayInput = array;*/
 
-    arrayInput = new char[4] {'1', 'P', 'b', '\0'};
+    arrayInput = new char[6] {'1', 'P', 'b', 'U', 'e', '\0'};
 }
 
 StringUtil::StringUtil(const char* c)
@@ -63,7 +63,7 @@ bool StringUtil::EqualTo(const char* c) //Measures two strings, confirming if th
 }
 
 void StringUtil::Append(const char* c) 
-{
+{                                
     char* app_str; 
     app_str = new char[strlen(c) + Length() + 1];
     strcpy_s(app_str, strlen(c) + Length() + 1, arrayInput);
@@ -71,6 +71,12 @@ void StringUtil::Append(const char* c)
     delete[] arrayInput;
     arrayInput = app_str;
     app_str = nullptr; 
+}
+
+void StringUtil::Append(const StringUtil& c)
+{ 
+    Append(c.CStr());
+    //Jasper did this :) -J
 }
 
 void StringUtil::Prepend(const char* c)
@@ -94,10 +100,9 @@ const char* StringUtil::CStr() const //Returns the string stored in arrayInput
 void StringUtil::ToLower()
 {
     //for (int i = 0; i <= Length(); i++)
-    int low_str = 0;
     for (int i = 0; i < Length(); i++)
     {
-        low_str = (tolower(arrayInput[i]));
+        arrayInput[i] = (tolower(arrayInput[i]));
     }
 
 
@@ -105,6 +110,59 @@ void StringUtil::ToLower()
 
 void StringUtil::ToUpper()
 {
-
+    for (int i = 0; i < Length(); i++)
+    {
+        arrayInput[i] = (toupper(arrayInput[i]));
+    }
 }
+
+int StringUtil::Find(const char* c)
+{
+    return Find(0, c);
+}
+
+char StringUtil::Find(int startIndex, const char* c)
+{
+    for (int i = startIndex; i < Length(); i++)
+    {
+        for (int j = 0; j <= strlen(c); j++)
+        {
+            if (j == strlen(c))
+            {
+                return i;
+            }
+            else
+            {
+                if (i + j < Length() && arrayInput[i + j] == c[j])
+                {
+
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+        }
+    }
+    return -1;
+}
+
+char* StringUtil::ReadFromConsole()
+{
+    char* conInput;
+    conInput = new char[1000];
+
+    std::cin.getline(conInput,1000);
+
+    delete[] arrayInput;
+    arrayInput = conInput;
+
+    return arrayInput;
+}
+
+
+
+
 

@@ -19,6 +19,7 @@ public: //Constructor/Destructors
 	bool EqualTo(const char* c);
 
 	void Append(const char* c);
+	void Append(const StringUtil& c);
 
 	void Prepend(const char* c);
 
@@ -26,5 +27,10 @@ public: //Constructor/Destructors
 
 	void ToLower();
 	void ToUpper();
+
+	int Find(const char* c);
+	char Find(int startIndex, const char* arrayInput);
+
+	char* ReadFromConsole();
 };
 

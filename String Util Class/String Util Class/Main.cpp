@@ -5,9 +5,9 @@ using namespace std;
 
 int main()
 {
-	char array[] = "Coolbeanz";
+	char array[] = "";
 	StringUtil String1;
 	//StringUtil String2;
-	String1.Append(&array[0]);
+	String1.ReadFromConsole();
 	cout << String1.CStr() << endl; 
 }
