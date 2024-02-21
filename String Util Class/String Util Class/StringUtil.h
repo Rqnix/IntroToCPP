@@ -18,20 +18,34 @@ public: //Constructor/Destructors
 
 	bool EqualTo(const char* c);
 
-	void Append(const char* c);
-	void Append(const StringUtil& c);
+	char* Append(const char* c);
 
-	void Prepend(const char* c);
+	char* Prepend(const char* c);
 
 	const char* CStr() const;
 
-	void ToLower();
-	void ToUpper();
+	char* ToLower();
+	char* ToUpper();
 
 	int Find(const char* c);
-	char Find(int startIndex, const char* arrayInput);
+	int Find(int startIndex, const char* c);
+
+	char* Replace(const char* _find, const char* _replace); 
 
 	char* ReadFromConsole();
-	void WriteToConsole();
+	char* WriteToConsole();
+
+	//Operators
+
+	bool operator==(const char* c);
+	bool operator!=(const char* c);
+	bool operator<(const char* c);
+	bool operator>(const char* c);
+
+	char operator[](int Index);
+
+	void operator=(const char* c);
+
+
 };
 
