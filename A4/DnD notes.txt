@@ -1,0 +1,37 @@
+Player
+Classes: Wizard, Rogue, Fighter
+Attacks: Attack roll required (d20)
+(Fighter) Glaive d10 - 10ft reach, dual shortsword 2d6 
+(Rogue) Rapier d8, Crossbow d6 - 30ft reach/120 w/ disadv 
+(Wizard) Dagger d4
+(Wizard) Spells: Magic missile, misty step, fireball
+Stats: HP, Movement, AC
+
+Commands:
+Actions: Attack, Magic missile, Fireball
+Bonus action: Misty step, second shortsword
+Movement: 30ft - 6 tiles
+
+Room[2][2]
+Tiles[18][18]
+
+18 18
+player pos (2,4)
+
+Dice roll mechanics: Complete
+D20, D10, D6, D4
+
+Objects - LoS, able to be moved over
+
+for each x row
+
+output string = "\t"
+	for each y column
+		gettile(x,y)
+
+gettile(x,y)
+	tilevalue[y][x]			
+
+stationary that use 1 ranged attack
+enemies that move REAALLY SIMPLY
+Teleporting enemies

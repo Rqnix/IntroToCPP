@@ -23,6 +23,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Constructors and destructor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{89AB8BB9-5644-49A6-BA7B-D3B51C4B6087}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary search", "Binary search\Binary search.vcxproj", "{14785E01-FDD2-4E03-B943-24909323381A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BFBB9203-7FFF-4D0A-8CB5-2DAA0C49E990}"
+	ProjectSection(SolutionItems) = preProject
+		Binary search\StringUtil.cpp = Binary search\StringUtil.cpp
+		Binary search\StringUtil.h = Binary search\StringUtil.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +119,14 @@ Global
 		{89AB8BB9-5644-49A6-BA7B-D3B51C4B6087}.Release|x64.Build.0 = Release|x64
 		{89AB8BB9-5644-49A6-BA7B-D3B51C4B6087}.Release|x86.ActiveCfg = Release|Win32
 		{89AB8BB9-5644-49A6-BA7B-D3B51C4B6087}.Release|x86.Build.0 = Release|Win32
+		{14785E01-FDD2-4E03-B943-24909323381A}.Debug|x64.ActiveCfg = Debug|x64
+		{14785E01-FDD2-4E03-B943-24909323381A}.Debug|x64.Build.0 = Debug|x64
+		{14785E01-FDD2-4E03-B943-24909323381A}.Debug|x86.ActiveCfg = Debug|Win32
+		{14785E01-FDD2-4E03-B943-24909323381A}.Debug|x86.Build.0 = Debug|Win32
+		{14785E01-FDD2-4E03-B943-24909323381A}.Release|x64.ActiveCfg = Release|x64
+		{14785E01-FDD2-4E03-B943-24909323381A}.Release|x64.Build.0 = Release|x64
+		{14785E01-FDD2-4E03-B943-24909323381A}.Release|x86.ActiveCfg = Release|Win32
+		{14785E01-FDD2-4E03-B943-24909323381A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

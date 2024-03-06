@@ -169,10 +169,6 @@ char* StringUtil::Replace(const char* _find, const char* _replace) //Uses the fi
         temp2 = new char[t2Len + 1];
         temp2[t2Len] = '\0';
 
-        int resultLen = strlen(temp1) + strlen(temp2) + strlen(_replace); //result is used to store the end result, in order of temp1, _replace then temp2
-        char* result;
-        result = new char[resultLen + 1];
-        result[resultLen] = '\0';
 
         for (int i = 0; i < t1Len; i++) //applying arrayInput onto temp1 until it hits the found string
         {
@@ -185,6 +181,11 @@ char* StringUtil::Replace(const char* _find, const char* _replace) //Uses the fi
             temp2[j] = arrayInput[i];
             j++;
         }
+
+        int resultLen = strlen(temp1) + strlen(temp2) + strlen(_replace); //result is used to store the end result, in order of temp1, _replace then temp2
+        char* result;
+        result = new char[resultLen + 1];
+        result[resultLen] = '\0';
 
         strcpy_s(result, resultLen + 1, temp1); //sewing the string back together
         strcat_s(result, resultLen + 1, _replace);
@@ -260,9 +261,13 @@ char StringUtil::operator[](int Index) //Tells you the character at the inputted
 
 void StringUtil::operator=(const char* c) //Copies the inputted string onto the main string
 {
+    delete[] arrayInput;
+
     arrayInput = new char[strlen(c) + 1];
 
     strcpy_s(arrayInput, strlen(c) + 1, c);
+
+
 }
 
 

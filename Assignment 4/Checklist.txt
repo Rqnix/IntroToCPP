@@ -1,0 +1,6 @@
+REQUIREMENTS:
+Navigate between rooms Done
+Room description/Item - Item description
+Alternate uses for items
+Description of items internal state to console
+Player class has spell list (using String class and random access container (vector)) Done
