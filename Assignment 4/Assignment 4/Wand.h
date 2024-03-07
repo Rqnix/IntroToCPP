@@ -5,16 +5,15 @@
 #include "Item.h"
 #include "Player.h"
 
-class Lamp : public Item
+class Wand : public Item
 {
-private:
-	bool isTurnedOn = false;
 public:
-	Lamp();
-	~Lamp();
+	Wand();
+	~Wand();
 
 public:
 	void Description() const override;
 	void Use() override;
+	
 };
 

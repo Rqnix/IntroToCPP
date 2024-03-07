@@ -1,7 +1,7 @@
 #pragma once
 #include "StringUtil.h"
 #include "player.h"
-#include "item.h"
+#include "Item.h"
 #include "Game.h"
 
 class Room

@@ -14,6 +14,8 @@ Player::~Player()
 
 bool Player::FindSpell(StringUtil a_spell)
 {
+	a_spell.ToLower();
+	
 		int L = 0;
 		int R = size(m_spell) - 1;
 
@@ -28,7 +30,7 @@ bool Player::FindSpell(StringUtil a_spell)
 			{
 				L = mid + 1;
 			}
-			else if (m_spell[mid] > a_spell.CStr())
+			else
 			{
 				R = mid - 1;
 			}

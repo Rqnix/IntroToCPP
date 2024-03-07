@@ -2,7 +2,7 @@
 #include "StringUtil.h"
 #include "Room.h"
 #include "player.h"
-#include "item.h"
+#include "Item.h"
 
 class Game
 {

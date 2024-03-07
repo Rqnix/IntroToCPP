@@ -33,6 +33,9 @@
     <ClInclude Include="Lamp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Wand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Lamp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
