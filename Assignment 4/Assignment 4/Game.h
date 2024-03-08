@@ -21,7 +21,10 @@ private:
 	int roomX = 0;
 	int roomY = 0;
 public:
+	/*bool hasWand = false;*/
+public:
 	Game();
 	~Game();
 	void Run();
+
 };

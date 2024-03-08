@@ -17,7 +17,7 @@ void Wand::Description() const
 
 void Wand::Use()
 {
-	StringUtil description2 = "you pick up the wand";
+	StringUtil description2 = "You swing the wand, a light breeze ruffles your hair.";
 	description2.WriteToConsole();
-	hasWand == true;
+	/*hasWand == true;*/
 }

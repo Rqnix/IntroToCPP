@@ -67,14 +67,20 @@ void Game::Run()
 		
 		if (strIn.Find("spell") != -1)
 		{
-			if (hasWand == true)
-			{
+			/*if (hasWand == true)
+			{*/
 				strIn.Replace("spell ", "");
 				if (player->FindSpell(strIn))
 				{
+					strIn.Prepend("You have the spell ");
 					strIn.WriteToConsole();
 				}
-			}
+				else
+				{
+					strIn = "You do not have this spell.";
+					strIn.WriteToConsole();
+				}
+			//}
 			
 			
 		}
