@@ -1,9 +1,5 @@
 #pragma once
-#include "StringUtil.h"
-#include "Room.h"
-#include "Game.h"
 #include "Item.h"
-#include "Player.h"
 
 class Wand : public Item
 {

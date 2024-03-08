@@ -131,6 +131,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="Lamp.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RiceBalls.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="StringUtil.h" />
     <ClInclude Include="Wand.h" />
@@ -140,8 +141,10 @@
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Lamp.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RiceBalls.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="StringUtil.cpp" />
+    <ClCompile Include="Task4.cpp" />
     <ClCompile Include="Wand.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

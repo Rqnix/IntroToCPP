@@ -1,13 +1,13 @@
 #pragma once
 #include "Item.h"
-
-class Lamp : public Item
+class RiceBalls : public Item
 {
 private:
-	bool isTurnedOn = false;
+	int RiceNum;
+	StringUtil RiceOutput;
 public:
-	Lamp();
-	~Lamp();
+	RiceBalls();
+	~RiceBalls();
 
 public:
 	void Description() const override;

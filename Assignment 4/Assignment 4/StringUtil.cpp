@@ -19,11 +19,17 @@ StringUtil::StringUtil(const char* c)
 }
 
 
-StringUtil::StringUtil(StringUtil& su) //& = address symbol - The constructor to copy strings
+StringUtil::StringUtil(const StringUtil& su) //& = address symbol - The constructor to copy strings
 {
     arrayInput = new char[strlen(su.CStr()) + 1]; //Allocates space equal to the length of the string "su" plus 1 (for the null terminator)
 
     strcpy_s(arrayInput, strlen(su.CStr()) + 1, su.CStr()); //Copies the string of "su" onto arrayInput, with the length of "su" plus 1 for null terminator
+}
+
+StringUtil::StringUtil(StringUtil&& other)
+{
+    arrayInput = other.arrayInput;
+    other.arrayInput = nullptr;
 }
 
 StringUtil::~StringUtil() //Deletes dynamically allocated memory
@@ -248,6 +254,11 @@ bool StringUtil::operator<(const char* c) //Tests to see if the left string is l
 
 }
 
+bool StringUtil::operator<(const StringUtil& other)
+{
+    return strcmp(arrayInput, other.arrayInput) < 0;
+}
+
 bool StringUtil::operator>(const char* c) //Tests to see if the left string is greater than the right string
 {
     return strcmp(arrayInput, c) > 0;
@@ -259,7 +270,7 @@ char StringUtil::operator[](int Index) //Tells you the character at the inputted
     return CharacterAt(Index);
 }
 
-void StringUtil::operator=(const char* c) //Copies the inputted string onto the main string
+StringUtil& StringUtil::operator=(const char* c) //Copies the inputted string onto the main string
 {
     delete[] arrayInput;
 
@@ -267,7 +278,24 @@ void StringUtil::operator=(const char* c) //Copies the inputted string onto the 
 
     strcpy_s(arrayInput, strlen(c) + 1, c);
 
+    return *this;
+}
 
+StringUtil& StringUtil::operator=(const StringUtil& other)
+{
+    delete arrayInput;
+    arrayInput = new char[strlen(other.arrayInput) + 1];
+    strcpy_s(arrayInput, strlen(other.arrayInput) + 1, other.arrayInput);
+    return *this;
+}
+
+StringUtil& StringUtil::operator=(StringUtil&& other)
+{
+    delete[] arrayInput;
+    arrayInput = other.arrayInput;
+    other.arrayInput = nullptr;
+
+    return *this;
 }
 
 

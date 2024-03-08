@@ -7,7 +7,8 @@ private:
 public: //Constructor/Destructors
 	StringUtil();
 	StringUtil(const char* c);
-	StringUtil(StringUtil& su);
+	StringUtil(const StringUtil& su);
+	StringUtil(StringUtil&& other);
 	~StringUtil();
 
 	//Functions 
@@ -40,11 +41,14 @@ public: //Constructor/Destructors
 	bool operator==(const char* c);
 	bool operator!=(const char* c);
 	bool operator<(const char* c);
+	bool operator<(const StringUtil& other);
 	bool operator>(const char* c);
 
 	char operator[](int Index);
 
-	void operator=(const char* c);
+	StringUtil& operator=(const char* c);
+	StringUtil& operator=(const StringUtil& other);
+	StringUtil& operator=(StringUtil&& other);
 
 
 };

@@ -1,8 +1,6 @@
 #pragma once
 #include "StringUtil.h"
-#include "player.h"
 #include "Item.h"
-#include "Game.h"
 
 class Room
 {

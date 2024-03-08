@@ -30,5 +30,5 @@ void Lamp::Use()
 		isTurnedOn = true;
 		description = "The lamp is on.";
 	}
-	Description();
+
 }
